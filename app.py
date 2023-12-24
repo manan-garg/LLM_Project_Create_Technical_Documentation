@@ -13,7 +13,7 @@ with st.sidebar:
     # Link to obtain Gemini Pro API Key
     "[Get a Gemini Pro API key](https://makersuite.google.com/u/2/app/apikey)"
 
-# Function to load Gemini model and get responses
+# Function to load Gemini Pro model and get responses
 def get_gemini_response(question):
     # Configure Gemini API
     genai.configure(api_key=gemini_api_key)
@@ -31,9 +31,9 @@ submit = st.button("Generate Documentation")
 
 # If the generate documentation button is clicked
 if submit:
-    # Check if Gemini API key is provided
+    # Check if Gemini Pro API key is provided
     if not gemini_api_key:
-        st.info("Please add your Gemini API key to continue.")
+        st.info("Please add your Gemini Pro API key to continue.")
         st.stop()
 
     # Create a prompt for the Gemini model
